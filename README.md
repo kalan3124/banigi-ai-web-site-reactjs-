@@ -1,8 +1,10 @@
-# React + Vite
+Banigi AI - React js 
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Currently, two official plugins are available:
+![image](https://github.com/user-attachments/assets/6d7fbc89-d533-4c4f-bc56-165f1d64be26)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![image](https://github.com/user-attachments/assets/a13e191f-020d-49ad-b7b7-c7abdd3355d3)
+
+![image](https://github.com/user-attachments/assets/0eaa81e2-e97e-465f-b4f3-622445059c86)
+
+
