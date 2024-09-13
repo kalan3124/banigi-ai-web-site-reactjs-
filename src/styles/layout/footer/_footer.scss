@@ -1,0 +1,122 @@
+.footer_Section {
+    background-color: $secondary;
+    padding: 60px 80px;
+    color: white;
+    @include largeScreen {
+        padding: 30px 50px;
+    }
+    .footer_div {
+        max-width: 1274.5px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+
+        @include bigScreen {
+            justify-content: space-between;
+        }
+
+        @include mediumScreen {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .footer_left {
+            width: 40%;
+            max-width: 415px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+
+            @include mediumScreen {
+                width: 90%;
+                margin: auto;
+                align-items: center;
+            }
+
+            img {
+                width: 201px;
+                @include bigScreen{
+                    width: 181px;
+                }
+            }
+            p {
+                width: 90%;
+                margin-top: 15px;
+                font-family: "Lato", sans-serif;
+                font-weight: 500;
+                line-height: 21.6px;
+                font-size: 18px;
+                @include mediumScreen {
+                    width: 100%;
+
+                    text-align: center;
+                }
+            }
+            .footer_social_link {
+                display: flex;
+                gap: 10px;
+                img {
+                    cursor: pointer;
+                    width: 35px;
+                }
+            }
+        }
+        .footer_right {
+            width: 60%;
+            max-width: 620px;
+            display: flex;
+
+            gap: 80px;
+
+            @include bigScreen {
+                gap: 40px;
+            }
+            @include mediumScreen {
+                width: 90%;
+                justify-content: space-between;
+            }
+            @include smallScreen {
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            h5 {
+                font-weight: 500;
+                font-family: "Lato", sans-serif;
+                font-size: 20px;
+                margin-bottom: 20px;
+                line-height: 24px;
+            }
+            ul {
+                li {
+                    cursor: pointer;
+                    margin-bottom: 15px;
+                    font-weight: 400;
+                    font-size: 18px;
+                }
+                li:hover {
+                    color: $accent;
+                }
+            }
+        }
+    }
+}
+
+.copyright_div {
+    background-color: $primary;
+    color: white;
+    text-align: center;
+    padding: 20px 0px;
+    font-family: "Lato", sans-serif;
+    h5 {
+        font-size: 20px;
+        font-weight: 500;
+        @include largeScreen{
+            font-size: 16px;
+        }
+        @include smallScreen{
+            font-size: 14px;
+        }
+    }
+}

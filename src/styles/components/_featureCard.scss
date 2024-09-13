@@ -1,0 +1,40 @@
+.feature_box{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    text-align: center;
+   
+    padding: 35px 25px;
+   
+    max-width: 237px;
+
+    @include largeScreen{
+        max-width: 200px;
+    }
+    @include smallScreen{
+        max-width: 237px;
+        padding: 28px 15px;
+    }
+    svg{
+        @include largeScreen{
+            width: 34px;
+        }
+        @include smallScreen{
+            width: 100%;
+        }
+    }
+    h4{
+        font-size: 18px;
+
+        @include bigScreen{
+            font-size: 16px;
+        }
+        @include largeScreen{
+            font-size: 14px;
+        }
+        @include smallScreen{
+            font-size: 17px;
+        }
+    }
+}

@@ -1,0 +1,191 @@
+.dash_CustomDesign{
+    margin-top: 30px;
+
+    h3{
+        font-size: 24px;
+        font-weight: 500;
+    }
+
+    .dash_CustomDesignForm{
+        margin-top: 60px;
+
+        .dash_CustomDesginFirst{
+            display: flex;
+            gap: 40px;
+            align-items: baseline;
+            @include mediumScreen{
+                flex-direction: column;
+                align-items: unset;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+                flex-basis: calc(33.33% - 20px);
+                
+
+                @include bigScreen{
+                flex-basis: calc(50% - 20px);
+
+                }
+                label{
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                textarea {
+                    background-color: $secondary;
+                    border: none;
+                    border-radius: 10px;
+                    resize: none;
+                    color: white;
+                    padding: 15px;
+                    min-height: 123px;
+
+                    &::placeholder {
+                        font-size: 14px;
+                        font-weight: 400;
+                        color: rgb(255, 255, 255) !important;
+                        font-family: "Lato", sans-serif;
+                    }
+                } 
+
+             
+
+                
+                .dash_CustomDesign_exam_btn{
+                    margin-top: 22px;
+                    button{
+                        font-weight: 500;
+                        font-size: 14px;
+                        
+                        background: $secondary;
+                        color:white;
+                        min-height: 70px;
+                        padding: 15px 20px;
+                        border-radius: 8px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+                }
+
+                .dash_customDesign_exam{
+                    
+                    p{
+                        
+                        border-radius: 8px;
+                        background: $secondary;
+                        color:white;
+                        padding: 15px 10px;
+                        
+                    }
+                   
+                }
+               
+            }
+            
+        }
+        .ExteriorDesignFileDiv {
+            display: flex;
+            max-width: 840px;
+            margin: 40px auto;
+            height: 399px;
+            @include bigScreen{
+                width: 90%;
+            }
+            @include largeScreen{
+                height: 300px;
+            }
+            @include mediumScreen{
+                flex-direction: column;
+                height: 700px;
+                width: 100%;
+                
+            }
+            .ExteriorDesignFile {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                position: relative;
+                background-color: $secondary;
+                .uploadedImage{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+                span {
+                    padding: 0px 50px;
+                    display: flex;
+                    gap: 10px;
+                    margin-left: 10px;
+                    font-family: "Lato", sans-serif;
+                    font-size: 16px;
+                    text-align: center;
+                    font-weight: 400;
+                    svg{    
+                        min-width: 21.5px;
+                    }
+
+                }
+                input {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+                @include mediumScreen{
+                    width: 100%;
+                    height: 50%;
+                    border-top-right-radius: 25px;
+                    border-bottom-left-radius: 0px;
+
+                }
+            }
+            .ExteriorDesignFileImg {
+                width: 50%;
+                background: #6A7074;
+                
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include mediumScreen{
+                    width: 100%;
+                    border-top-right-radius: 0px;
+                    border-bottom-left-radius: 25px;
+                    height: 50%;
+                }
+            }
+           
+        
+        }
+
+        .ExteriorDesignBtn{
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+            button{
+                padding: 30px 0px;
+                width: 450px;
+                font-weight: 500;
+                font-size: 20px;
+            }
+            @include mediumScreen{
+                margin-bottom: 150px;
+            }
+        
+        }
+    }
+}

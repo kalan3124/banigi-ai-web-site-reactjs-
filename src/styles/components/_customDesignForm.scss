@@ -1,0 +1,48 @@
+.selectOptionDiv{
+
+    
+    textarea{
+        background-color: $inputForm;
+        border: none;
+        border-radius: 10px;
+        resize: none;
+        color: white;
+        padding: 15px;
+        min-height: 123px;
+        outline: none;
+        &::placeholder {
+            font-size: 14px;
+            font-weight: 400;
+            color: rgb(255, 255, 255) !important;
+            font-family: "Lato", sans-serif;
+        }
+    }
+
+    .roomTypeExample{
+        margin-bottom: 20px;
+        p{
+            font-weight: 500;
+            font-size: 14px;
+            margin-top: 10px;
+            background: $inputForm;
+            color:white;
+            min-height: 70px;
+            padding: 15px 20px;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .roomTypeExamplePara{
+            margin-top: 10px;
+            p{
+                border-radius: 8px;
+                background: $inputForm;
+                color:white;
+                padding: 15px 10px;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

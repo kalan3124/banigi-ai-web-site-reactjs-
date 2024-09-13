@@ -1,0 +1,46 @@
+// Utils CSS
+
+@import "./styles/utils/mediaQueries";
+@import "./styles/utils/variables";
+
+// base css
+
+@import "./styles/base/base";
+
+// component css
+
+@import "./styles/components/bannerCard";
+@import "./styles/components/howItworkCard";
+@import "./styles/components/pricingCard";
+@import "./styles/components/faqCard";
+@import "./styles/components/tryDesignForm";
+@import "./styles/components/customDesignForm";
+@import "./styles/components/primaryButton";
+
+@import "./styles/components/loginModal";
+
+@import "./styles/components/legalModal";
+
+@import "./styles/pages/dashboardPages/customDesign";
+@import "./styles/pages/dashboardPages/exteriorDesign";
+@import "./styles/pages/dashboardPages/interiorDesign";
+@import "./styles/pages/dashboardPages/myDesign";
+@import "./styles/pages/dashboardPages/pricingDesign";
+@import "./styles/components/dashBoard_component/allDesignDash";
+@import "./styles/components/featureCard";
+
+
+
+
+// Layout css
+
+@import "./styles/layout/footer/footer";
+@import "./styles/layout/header/header";
+
+
+
+// Pages css
+
+@import "./styles/home/home";
+@import "./styles/pages/dashboard";
+

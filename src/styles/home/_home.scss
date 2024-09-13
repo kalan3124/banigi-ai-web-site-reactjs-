@@ -1,0 +1,1271 @@
+// Banner Section
+
+.main_banner {
+    background: url("../public/banner.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 30% 17%;
+    color: white;
+
+    @include mediumScreen {
+        background-size: cover;
+        background-position: 40%;
+    }
+
+    .main_banner_div {
+        display: flex;
+        gap: 10px;
+        min-height: 100vh;
+
+        background-color: rgba(0, 0, 0, 0.4);
+
+        .banner_left {
+            width: 95%;
+            margin: 0px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @include largeScreen {
+                width: 90%;
+            }
+
+            .banner_left_text {
+                max-width: 737px;
+                text-align: center;
+
+                @include bigScreen {
+                    max-width: 553px;
+                }
+
+                @include largeScreen {
+                    max-width: 420px;
+                }
+
+                h1 {
+                    font-size: 45px;
+                    line-height: 60px;
+
+                    @include bigScreen {
+                        font-size: 35px;
+                        line-height: 50px;
+                    }
+
+                    @include largeScreen {
+                        font-size: 25px;
+                        line-height: 40px;
+                    }
+
+                    @include smallScreen {
+                        font-size: 21px;
+                        line-height: 40px;
+                    }
+
+                    .vector_img {
+                        position: relative;
+                        width: 150px;
+                        display: inline-block;
+
+                        @include smallScreen {
+                            width: 80px;
+                        }
+
+                        .vector_icon {
+
+                            width: 100%;
+                            max-width: 166px;
+                            height: 18px;
+                            position: absolute;
+                            bottom: -10px;
+                            left: 0%;
+
+                            @include bigScreen {
+                                height: 13px;
+                            }
+
+                            @include smallScreen {
+                                bottom: -7px;
+                                height: 10px;
+                            }
+
+                        }
+                    }
+
+                    @keyframes changeText {
+                        0% {
+                            content: var(--text1);
+                            transform: translateY(100%);
+                            opacity: 1;
+                        }
+
+                        20% {
+                            content: var(--text1);
+                            transform: translateY(0%);
+                            opacity: 1;
+                        }
+
+                        30% {
+                            content:  var(--text1);
+                            transform: translateY(100%);
+                            opacity: 0;
+                        }
+
+                        31% {
+                            opacity: 0;
+                            content:  var(--text2);
+                            transform: translateY(100%);
+                        }
+
+                        40% {
+                            opacity: 1;
+                            content: var(--text2);
+                            transform: translateY(0%);
+                        }
+
+                        50% {
+                            opacity: 0;
+                            content: var(--text2);
+                            transform: translateY(100%);
+                        }
+
+                        51% {
+                            opacity: 0;
+                            content: var(--text3);
+                            transform: translateY(100%);
+                        }
+
+                        60% {
+                            opacity: 1;
+
+                            content: var(--text3);
+                            transform: translateY(0%);
+                        }
+
+                        70% {
+                            opacity: 0;
+
+                            content: var(--text3);
+                            transform: translateY(100%);
+                        }
+
+                        71% {
+
+                            opacity: 0;
+                            content: var(--text4);
+                            transform: translateY(100%);
+                        }
+
+                        81% {
+                            opacity: 1;
+
+
+                            content: var(--text4);
+                            transform: translateY(0%);
+                        }
+
+                        100% {
+                            opacity: 0;
+
+
+                            content: var(--text4);
+                            transform: translateY(100%);
+                        }
+
+
+
+
+                    }
+
+                    .ani_text {
+                        position: absolute;
+                        left: 0%;
+                        bottom: 100%;
+                        
+                    }
+
+                    .ani_text::before {
+                        content: var(--text1);
+                        display: inline-block;
+                        position: relative;
+                        animation: changeText 6s infinite;
+                        width: max-content;
+                        /* Increased the duration to accommodate delays */
+                    }
+
+                    span {
+                        color: $accent;
+                    }
+                }
+
+                p {
+                    font-family: "Lato", sans-serif;
+                    font-size: 20px;
+                    line-height: 28px;
+                    margin: 25px 0px;
+
+                    @include bigScreen {
+                        font-size: 16px;
+                    }
+                }
+
+                .banner_left_btn {
+                    display: flex;
+                    gap: 25px;
+                    margin-top: 60px;
+                    justify-content: center;
+
+                    .tryBtn {
+                        background-color: $accent;
+                        color: white;
+                        padding: 12px 17px;
+                        border-radius: 10px;
+                        font-size: 20px;
+
+                        @include bigScreen {
+                            padding: 15px 20px;
+                            font-size: 18px;
+                        }
+
+                        @include largeScreen {
+                            padding: 15px;
+                            font-size: 16px;
+                        }
+
+                        // @include smallScreen{
+                        //     padding: 15px;
+                        //     font-size: 14px;
+                        // }
+                    }
+
+                    .watchBtn {
+                        background: transparent;
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        color: white;
+                        font-size: 18px;
+                        text-decoration: underline;
+
+                        @include bigScreen {
+                            font-size: 16px;
+                        }
+
+                        @include largeScreen {
+                            font-size: 14px;
+                        }
+
+                        img {
+                            width: 58px;
+
+                            @include bigScreen {
+                                width: 47px;
+                            }
+
+                            @include smallScreen {
+                                width: 38px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        // .banner_right {
+        //     width: 65%;
+        //     position: relative;
+
+        //     @include largeScreen {
+        //         width: 80%;
+        //         margin: auto;
+        //     }
+
+        //     .banner_right_div {
+        //         position: absolute;
+        //         bottom: 10%;
+        //         padding-bottom: 20px;
+        //         display: flex;
+        //         justify-content: space-between;
+        //         gap: 20px;
+        //         left: 0;
+        //         right: 0;
+
+        //         @include bigScreen {
+        //             flex-wrap: wrap;
+        //             justify-content: center;
+        //         }
+
+        //         @include largeScreen {
+        //             position: static;
+
+        //         }
+
+        //         &>*:nth-child(2) {
+        //             background-color: $accent;
+        //         }
+        //     }
+        // }
+    }
+}
+
+// How It Work CSS
+
+// .HowItWorkDiv {
+//     padding: 70px 70px 0px 70px;
+//     background-color: $secondary;
+//     color: white;
+
+//     h2 {
+//         text-align: center;
+//         font-size: 40px;
+//         font-weight: 700;
+//         margin-bottom: 30px;
+
+//         @include mediumScreen {
+//             font-size: 30px;
+//             margin-bottom: 17px;
+//         }
+
+//         span {
+//             color: $accent;
+//         }
+//     }
+
+//     .HowItWorkContainer {
+//         display: flex;
+
+//         justify-content: space-between;
+
+//         @include bigScreen {
+//             flex-direction: column;
+//             align-items: center;
+
+//         }
+
+//         .HowItWork_left,
+//         .HowItWork_right {
+
+//             margin-top: 50px;
+
+//             .card_line {
+//                 width: 70%;
+//                 margin: 80px auto;
+//                 opacity: 0.5;
+
+//                 @include bigScreen {
+//                     margin: 30px auto;
+//                 }
+
+//             }
+
+//         }
+
+//         .HowItWork_right {
+//             @include bigScreen {
+//                 margin-top: -40px;
+//             }
+//         }
+
+//         .HowItWork_Middle {
+//             margin-top: 20px;
+
+//             img {
+
+//                 min-width: 400px;
+//                 max-width: 700px;
+//                 width: 100%;
+//                 height: 100%;
+
+//             }
+//         }
+
+//     }
+// }
+
+// Design Grid Css
+
+.DesignGridDiv {
+    background-color: $primary;
+    color: white;
+    padding: 60px 70px;
+
+    @include largeScreen {
+        padding: 40px 28px;
+    }
+
+    .featureCardDiv {
+        width: 100%;
+        display: flex;
+
+        justify-content: space-between;
+        max-width: 1274.5px;
+        margin: auto;
+
+        @include mediumScreen {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        hr {
+            @include mediumScreen {
+                height: 80px;
+            }
+        }
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 35px;
+        margin-top: 100px;
+
+        @include bigScreen {
+            font-size: 30px;
+        }
+
+        @include largeScreen {
+            font-size: 20px;
+        }
+
+        span {
+            color: $accent;
+        }
+    }
+
+    .DesignGridLayout {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 30px;
+        max-width: 1274.5px;
+        margin: auto;
+
+        @include mediumScreen {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include smallScreen {
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        .grid_item1 {
+            @include smallScreen {
+                grid-row: span 2;
+            }
+        }
+
+        .grid_item2 {
+            grid-row: span 2;
+        }
+
+        .grid_item5 {
+            grid-row: span 2;
+        }
+
+        .grid_item6 {
+            grid-column: span 2;
+
+            @include mediumScreen {
+                grid-column: span 1;
+            }
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}
+
+.TryDesignDiv {
+    background-color: $secondary;
+    padding: 50px;
+    color: white;
+
+    @include largeScreen {
+        padding: 25px;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 30px;
+
+        @include bigScreen {
+            font-size: 30px;
+        }
+
+        @include largeScreen {
+            font-size: 20px;
+        }
+
+        span {
+            color: $accent;
+        }
+    }
+
+    .tabs-container {
+        .tab-heading {
+            display: grid;
+            grid-template-columns: repeat(4, minmax(0, auto));
+            gap: 40px;
+            margin-bottom: 50px;
+            justify-content: center;
+
+            @include bigScreen {
+                gap: 20px;
+            }
+
+            @include largeScreen {
+                gap: 15px;
+            }
+
+            @include mediumScreen {
+                grid-template-columns: repeat(2, minmax(0, auto));
+            }
+
+            button {
+                background-color: transparent;
+                border: 1px solid $accent;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 10px;
+                font-size: 20px;
+
+                @include bigScreen {
+                    font-size: 16px;
+                }
+
+                @include largeScreen {
+                    font-size: 13px;
+                }
+
+                @include mediumScreen {
+                    font-size: 12px;
+                    padding: 15px;
+                }
+            }
+
+            button.active {
+                background-color: $accent;
+            }
+        }
+
+        .tab_content_div {
+            margin: 0px auto;
+            display: flex;
+            max-width: 1274.5px;
+            padding: 30px 0px;
+            justify-content: center;
+
+            @include bigScreen {
+                width: 95%;
+            }
+
+            @include largeScreen {
+                flex-direction: column;
+            }
+
+            gap: 30px;
+
+            .tab-content {
+                width: 40%;
+
+                @include bigScreen {
+                    width: 50%;
+                }
+
+                @include largeScreen {
+                    width: 80%;
+                    margin: auto;
+                }
+
+                @include smallScreen {
+                    width: 100%;
+                }
+            }
+
+            .swiper-div {
+                width: 55%;
+
+                @include bigScreen {
+                    width: 50%;
+                }
+
+                @include largeScreen {
+                    width: 100%;
+                }
+
+                .swiper {
+                    height: 100%;
+                    padding-bottom: 20px;
+
+                    .swiper-slide {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        img {
+                            width: 100%;
+                            max-width: 550px;
+                            height: 100%;
+                        }
+                    }
+
+                    .swiper-pagination {
+                        bottom: 0px;
+
+                        .swiper-pagination-bullet {
+                            background-color: rgb(255, 255, 255);
+                            display: inline-block;
+                            width: 0.6rem;
+                            height: 0.6rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+// build you job css
+
+.buildJobDiv {
+    background-color: $primary;
+    color: white;
+    padding: 60px 70px;
+
+    @include largeScreen {
+        padding: 40px 28px;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 35px;
+
+        @include bigScreen {
+            font-size: 30px;
+        }
+
+        @include largeScreen {
+            font-size: 20px;
+        }
+
+        span {
+            color: $accent;
+        }
+    }
+
+    .top-down-img {
+
+        margin: auto;
+        display: flex;
+        max-width: 1374.5px;
+        margin-bottom: 70px;
+        gap: 15px;
+
+        justify-content: center;
+
+@include mediumScreen{
+    flex-wrap: wrap;
+}
+@include smallScreen{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    
+}
+        .first_job_Card {
+            position: relative;
+            cursor: pointer;
+            overflow: hidden;
+            width: 350px;
+
+            &:nth-child(even) {
+                top: 100px;
+                @include mediumScreen{
+                    top: 0px;
+                }
+            }
+
+            @include smallScreen{
+                width: 100%;
+            }
+            img {
+                width: 300px;
+                height: 100%;
+            }
+
+            svg {
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+
+
+            .job_card_text {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                bottom: -600px;
+                border-radius: 7px;
+                background: #43484B;
+
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 25px;
+                padding: 10px 20px;
+                transition: all .4s;
+
+                @include bigScreen {
+                    font-size: 14px;
+                    padding: 5px 10px;
+                }
+
+            }
+
+        }
+
+
+    }
+
+
+    .first_job_Card:hover .job_card_text {
+        bottom: 0px;
+    }
+
+}
+
+
+// FeedBack CSS
+
+.feedback_div {
+    background-color: #343a45;
+    color: white;
+
+    padding: 60px 70px;
+
+    @include largeScreen {
+        padding: 40px 28px;
+    }
+
+    h2 {
+        text-align: center;
+        font-size: 40px;
+        margin-bottom: 30px;
+        font-weight: 700;
+
+        @include bigScreen {
+            font-size: 30px;
+        }
+
+        @include largeScreen {
+            font-size: 20px;
+        }
+
+        span {
+            color: $accent;
+        }
+    }
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+        padding-bottom: 50px;
+        max-width: 1274.5px;
+        padding-left: 50px;
+        padding-right: 50px;
+
+        @include bigScreen {
+            padding-left: 40px;
+            padding-right: 40px;
+        }
+
+        @include largeScreen {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+
+            img {
+                width: 100%;
+                max-width: fit-content;
+            }
+        }
+
+        .swiper-button-prev {
+            img {
+                position: absolute;
+                left: -10px;
+                width: 45px;
+                height: 45px;
+
+                @include bigScreen {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                @include smallScreen {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+
+        .swiper-button-prev::after {
+            display: none;
+        }
+
+        .swiper-button-next {
+            img {
+                position: absolute;
+                right: -10px;
+                width: 45px;
+                height: 45px;
+
+                @include bigScreen {
+                    width: 40px;
+                    height: 40px;
+                }
+
+                @include smallScreen {
+                    width: 32px;
+                    height: 32px;
+                }
+            }
+        }
+
+        .swiper-button-next::after {
+            display: none;
+        }
+
+        .swiper-pagination-bullet {
+            background-color: rgb(255, 255, 255);
+            display: inline-block;
+            width: 0.6rem;
+            height: 0.6rem;
+        }
+    }
+}
+
+// Download App Css
+
+.downloadAppDiv {
+    background-color: #343a45;
+    padding: 20px 70px;
+
+    @include mediumScreen {
+        padding: 20px 20px;
+    }
+
+    .downloadAppInfo {
+        max-width: 1274.5px;
+        margin: auto;
+        background-color: white;
+        display: flex;
+        border-radius: 20px;
+        padding: 50px 105px;
+        background-image: url("../public/downloadAppbg.png");
+        background-repeat: no-repeat;
+        background-position: right;
+
+        background-size: contain;
+
+        @include bigScreen {
+            padding: 50px 0px;
+            flex-direction: column-reverse;
+            background-image: none;
+        }
+
+        .downloadAppText {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 25px;
+
+            @include bigScreen {
+                width: 90%;
+                text-align: center;
+                align-items: center;
+                padding-left: 0;
+                margin: auto;
+            }
+
+            h2 {
+                max-width: 400px;
+                font-size: 32px;
+                color: #43484b;
+
+                @include bigScreen {
+                    max-width: 100%;
+                    font-size: 25px;
+                }
+
+                @include largeScreen {
+                    font-size: 20px;
+                }
+            }
+
+            p {
+                font-family: "Lato", sans-serif;
+                font-size: 20px;
+
+                @include largeScreen {
+                    font-size: 16px;
+                }
+            }
+
+            .downloadBtn {
+                display: flex;
+                gap: 20px;
+
+                // @include bigScreen {
+                //     width: 100%;
+                // }
+
+                @include smallScreen {
+                    flex-direction: column;
+                }
+
+                img {
+                    width: 100%;
+                    cursor: pointer;
+                    max-width: 205px;
+
+                    // @include smallScreen {
+                    //     width: 70%;
+                    //     margin: auto;
+                    // }
+                }
+            }
+        }
+
+        .DownloadAppImg {
+            width: 50%;
+            display: flex;
+            justify-content: flex-end;
+
+            @include bigScreen {
+                width: 80%;
+                margin: auto;
+                justify-content: center;
+            }
+
+            .mobileImgDiv {
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+// Pricing Section CSS
+
+.pricing_section {
+    background-color: $primary;
+    color: white;
+    padding-top: 100px;
+    padding-bottom: 30px;
+
+    .pricingDiv {
+        width: 90%;
+
+        margin: auto;
+
+        .pricing_header {
+            text-align: center;
+            max-width: 50%;
+            margin: auto;
+
+            @include bigScreen {
+                max-width: 100%;
+            }
+
+            h3 {
+                font-size: 40px;
+                font-weight: 700;
+                margin-bottom: 15px;
+
+                @include bigScreen {
+                    font-size: 30px;
+                }
+
+                @include largeScreen {
+                    font-size: 20px;
+                }
+            }
+
+            p {
+                margin: 0px auto;
+                max-width: 551px;
+                font-size: 22px;
+                line-height: 26.4px;
+                font-family: "Lato", sans-serif;
+
+                @include bigScreen {
+                    font-size: 18px;
+                    line-height: 21.6px;
+                }
+
+                @include largeScreen {
+                    font-size: 16px;
+                    line-height: 19.2px;
+                }
+            }
+        }
+
+        .pricing_bottom {
+            display: flex;
+            justify-content: center;
+            gap: 40px;
+            margin-top: 100px;
+
+            @include largeScreen {
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            &>*:nth-child(1),
+            &>*:nth-child(3) {
+                align-self: start;
+
+                @include largeScreen {
+                    align-self: unset;
+                }
+            }
+
+            &>*:nth-child(2) {
+                padding: 100px 71px;
+                position: relative;
+                top: -50px;
+
+                @include largeScreen {
+                    position: unset;
+                }
+            }
+        }
+    }
+}
+
+// Frequent Ask Question CSS
+
+.faqDiv {
+    background-color: $secondary;
+    color: white;
+    padding: 60px 70px;
+
+    @include largeScreen {
+        padding: 60px 30px;
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 30px;
+        margin-bottom: 30px;
+
+        @include bigScreen {
+            font-size: 30px;
+        }
+
+        @include largeScreen {
+            font-size: 20px;
+        }
+
+        span {
+            color: $accent;
+        }
+    }
+
+    .faqList {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        max-width: 943.5px;
+        margin: auto;
+
+        @include largeScreen {
+            max-width: 100%;
+        }
+    }
+
+    .seeMoreBtn {
+        margin: 15px 0px;
+        cursor: pointer;
+        font-weight: 400;
+        font-size: 20px;
+        text-align: center;
+        text-decoration: underline;
+    }
+}
+
+// Contact Us CSS
+.contactUsContainner {
+    background-color: $primary;
+
+    color: white;
+
+    .contactUsSection {
+        width: 90%;
+        margin: auto;
+        padding-top: 50px;
+        padding-bottom: 100px;
+
+        h3 {
+            font-size: 40px;
+            text-align: center;
+            margin-bottom: 40px;
+
+            @include bigScreen {
+                font-size: 30px;
+            }
+
+            @include largeScreen {
+                font-size: 20px;
+            }
+
+            span {
+                color: $accent;
+            }
+        }
+    }
+
+    .contactusDiv {
+        display: flex;
+        max-width: 1274.5px;
+        margin: auto;
+
+        @include largeScreen {
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .contactUsLeft {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+
+            @include largeScreen {
+                width: 80%;
+                margin: auto;
+            }
+
+            img {
+                width: 100%;
+                max-width: 475.14px;
+                max-height: 44248px;
+            }
+
+            p {
+                font-family: "Lato", sans-serif;
+                font-size: 18px;
+                line-height: 21.6px;
+                font-weight: 400;
+
+                max-width: 450px;
+                text-align: center;
+            }
+        }
+
+        .contactUsRight {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+
+            @include largeScreen {
+                width: 80%;
+                margin: auto;
+            }
+
+            @include smallScreen {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .contactForm {
+                max-width: 512px;
+                min-height: 712px;
+                width: 70%;
+                border: 2px solid white;
+                padding: 40px 45px;
+
+                border-radius: 30px;
+
+                @include bigScreen {
+                    width: 90%;
+                }
+
+                @include smallScreen {
+                    width: 100%;
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+
+                    label {
+                        font-family: "Lato", sans-serif;
+                    }
+
+                    input {
+                        background: transparent;
+                        border: 1.5px solid white;
+                        height: 70px;
+                        border-radius: 10px;
+                        color: white;
+                        margin-top: 15px;
+                        margin-bottom: 30px;
+                        outline: none;
+                        font-size: 18px;
+                        padding-left: 5px;
+                    }
+
+                    textarea {
+                        font-size: 18px;
+                        padding-top: 5px;
+                        padding-left: 5px;
+                        outline: none;
+                        resize: none;
+                        background: transparent;
+                        border: 1.5px solid white;
+                        height: 215px;
+                        border-radius: 10px;
+                        color: white;
+                        margin-top: 15px;
+                        margin-bottom: 30px;
+                    }
+
+                    .submitBtn {
+                        padding: 15px;
+                        min-height: 70px;
+                        background-color: $accent;
+                        color: white;
+                        font-weight: 500;
+                        border-radius: 10px;
+                        font-size: 20px;
+
+                        @include largeScreen {
+                            min-height: 50px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

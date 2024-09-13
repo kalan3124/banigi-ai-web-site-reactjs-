@@ -1,0 +1,43 @@
+.myDesignSection{
+    margin-top: 30px;
+
+    h3{
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .tabs-container{
+        margin-top: 40px;
+        .tab-heading{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            margin-bottom: 50px;
+           
+            button{
+                background-color: transparent;
+                border: 1px solid $accent;
+                color: white;
+                padding: 15px 20px;
+                border-radius: 10px;
+            }
+            button.active{
+                background-color: $accent;
+            }
+        }
+        .tab_content_div{
+                
+
+            
+            .tab-content{
+            }
+        
+            @include mediumScreen{
+                margin-bottom: 100px;
+            }
+                
+            
+        }
+        
+    }
+}

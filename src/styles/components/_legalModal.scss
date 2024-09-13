@@ -1,0 +1,72 @@
+.legalModalContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.70);
+    padding-top: 20px;
+    padding-bottom: 20px;
+    overflow-y: scroll;
+    z-index: 10;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;
+    .legalModalDiv {
+        background-color: white;
+        border-radius: 30px;
+        width: 75%;
+        background-color: $secondary;
+        padding: 50px;
+
+        margin: auto;
+
+        @include largeScreen{
+            width: 90%;
+            padding: 25px;
+        }
+
+        .modalHeader {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            h3{
+                font-size: 20px;
+                font-weight: 700;
+            }
+            img{
+                cursor: pointer;
+            }
+        }
+        .modalText{
+            p{
+                margin: 20px 0px;
+                text-align: justify;
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 24.38px;
+            }
+            span{
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 24.38px;
+            }
+            .policySubHeading{
+                font-weight: 400;
+                
+            }
+
+            
+        }
+    }
+
+
+}
+.legalModalContainer::-webkit-scrollbar{
+    display: none;
+}

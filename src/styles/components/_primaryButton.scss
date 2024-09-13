@@ -1,0 +1,19 @@
+.primary_btn{
+    background-color: $accent;
+    color: white;
+    padding: 15px 0px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+.secondary_btn{
+    background-color:transparent;
+    color: white;
+    padding: 15px 0px;
+    border-radius: 10px;
+    font-size: 17px;
+    border: 1px solid $accent;
+    transition: background-color 0.1s;
+    &:hover{
+        background-color: $accent;
+    }
+}

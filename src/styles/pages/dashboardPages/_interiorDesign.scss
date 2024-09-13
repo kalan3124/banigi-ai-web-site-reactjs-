@@ -1,0 +1,255 @@
+.dash_InteriorDesign {
+    margin-top: 30px;
+
+    h3 {
+        font-size: 24px;
+        font-weight: 500;
+    }
+    .dash_interiorDesignForm {
+        margin-top: 60px;
+        .dash_interiorDesignFirst,
+        .dash_interiorDesignSecond {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            @include largeScreen {
+                flex-direction: column;
+            }
+            > div {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                flex-wrap: wrap;
+                flex-basis: calc(33.33% - 20px);
+
+            
+                .css-ibfo6y-control {
+                    outline: none;
+                    box-shadow: unset;
+                }
+                .react-select__dropdown-indicator,
+                .react-select__indicator-separator {
+                    display: none;
+                }
+                label {
+                    font-size: 20px;
+                    font-weight: 600;
+                }
+
+                .intervation_radio {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    position: relative;
+                    flex-wrap: nowrap;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        top: 13%;
+
+                        left: 50%;
+                        transform: translateX(-50%);
+                        height: 5px;
+
+                        width: 88%;
+                        background-color: white;
+                    }
+
+                    div {
+                        
+                        z-index: 3;
+
+                        position: relative;
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        gap: 5px;
+
+                        input {
+                            appearance: none;
+                            width: 23px;
+                            height: 23px;
+                            border: 2px solid $accent;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            background-color: $secondary;
+
+                            &:checked {
+                                background-color: $accent;
+                            }
+                        }
+                        label {
+                            margin-top: 20px;
+                            font-size: 14px;
+                            font-weight: 400;
+                        }
+
+                        &:last-child::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+        }
+        .dash_interiorDesignThird {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 15px;
+            .customAiIntervationForm {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                flex-wrap: wrap;
+                flex-basis: calc(33.33% - 20px);
+
+                @include largeScreen {
+                    flex-basis: calc(100%);
+                }
+
+                .customAiIntervationLabel {
+                    display: flex;
+
+                    gap: 15px;
+
+                    input[type="checkbox"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        width: 25px;
+                        height: 25px;
+                        border: 1px solid $accent;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        position: relative;
+
+                        &:checked {
+                            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23C79952" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 75%;
+                        }
+                    }
+                    label {
+                        font-size: 20px;
+                        font-weight: 600;
+                    }
+                }
+
+                textarea {
+                    background-color: $secondary;
+                    border: none;
+                    border-radius: 10px;
+                    resize: none;
+                    color: white;
+                    padding: 15px;
+                    min-height: 123px;
+                }
+
+                ::placeholder {
+                    font-size: 14px;
+                    font-weight: 400;
+                    color: rgb(255, 255, 255) !important;
+                    font-family: "Lato", sans-serif;
+                }
+            }
+        }
+
+        .interiorDesignFileDiv {
+            display: flex;
+            max-width: 840px;
+            margin: 40px auto;
+            height: 399px;
+            @include bigScreen {
+                width: 90%;
+            }
+            @include largeScreen {
+                height: 300px;
+            }
+            @include mediumScreen {
+                flex-direction: column;
+                height: 700px;
+                width: 100%;
+            }
+            .interiorDesignFile {
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                border-top-left-radius: 25px;
+                border-bottom-left-radius: 25px;
+                position: relative;
+                background-color: $secondary;
+                .uploadedImage {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                }
+                span {
+                    padding: 0px 50px;
+                    display: flex;
+                    gap: 10px;
+                    margin-left: 10px;
+                    font-family: "Lato", sans-serif;
+                    font-size: 16px;
+                    text-align: center;
+                    font-weight: 400;
+                    svg {
+                        min-width: 21.5px;
+                    }
+                }
+
+                input {
+                    display: block;
+                    height: 100%;
+                    width: 100%;
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    opacity: 0;
+                    cursor: pointer;
+                }
+                @include mediumScreen {
+                    width: 100%;
+                    height: 50%;
+                    border-top-right-radius: 25px;
+                    border-bottom-left-radius: 0px;
+                }
+            }
+            .interiorDesignFileImg {
+                width: 50%;
+                background: #6a7074;
+
+                border-top-right-radius: 25px;
+                border-bottom-right-radius: 25px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include mediumScreen {
+                    width: 100%;
+                    border-top-right-radius: 0px;
+                    border-bottom-left-radius: 25px;
+                    height: 50%;
+                }
+            }
+        }
+
+        .InteriorDesignBtn {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 100px;
+            button {
+                padding: 30px 0px;
+                width: 450px;
+                font-weight: 500;
+                font-size: 20px;
+            }
+
+            @include mediumScreen {
+                margin-bottom: 150px;
+            }
+        }
+    }
+}

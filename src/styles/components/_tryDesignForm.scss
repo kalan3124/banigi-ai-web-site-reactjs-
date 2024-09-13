@@ -1,0 +1,195 @@
+.tryDesignFormDiv {
+    background-color: $secondary;
+
+    form {
+        .tryDesignFile {
+            display: flex;
+            flex-direction: column;
+            border: 1px dashed white;
+            padding: 80px 35px;
+            border-radius: 10px;
+            position: relative;
+            @include bigScreen{
+                padding: 80px 20px;
+            }
+            @include largeScreen{
+                padding: 40px 10px;
+            }
+            span {
+                display: flex;
+                gap: 10px;
+                font-family: "Lato", sans-serif;
+
+                svg{
+                    min-width: 25px;
+                }
+            }
+
+            input {
+                display: block;
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                opacity: 0;
+                cursor: pointer;
+                
+            }
+        }
+
+        .selectOptionDiv {
+            display: flex;
+            flex-direction: column;
+            margin-top: 20px;
+
+            label {
+                margin-bottom: 15px;
+                font-size: 20px;
+                font-weight: 600;
+                @include largeScreen{
+                    font-size: 18px;
+                }
+                @include smallScreen{
+                    font-size: 16px;
+                }
+            }
+
+            .css-om084u-control,.css-ibfo6y-control{
+                background-color: $inputForm;
+            }
+           
+            .css-ibfo6y-control {
+                outline: none;
+                box-shadow: unset;
+            }
+            .react-select__dropdown-indicator,
+            .react-select__indicator-separator {
+                display: none;
+            }
+
+            .intervation_radio {
+
+                display: flex;
+                justify-content: space-between;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 18%;
+
+                    left: 50%;
+                    transform: translateX(-50%);
+                    height: 5px;
+
+
+                    width: 90%;
+                    background-color: white;
+                }
+
+                div {
+                    z-index: 3;
+
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: column;
+                    gap: 5px;
+
+                    input {
+                        appearance: none;
+                        width: 30px;
+                        height: 30px;
+                        border: 2px solid $accent;
+                        border-radius: 50%;
+                        cursor: pointer;
+                        background-color: $secondary;
+
+                        &:checked {
+                            background-color: $accent;
+                        }
+                    }
+                    label{
+                        font-size: 14px;
+                        font-weight: 400;
+                        font-family: "Lato", sans-serif;
+
+                    }
+
+                    &:last-child::after {
+                        display: none;
+                    }
+                }
+            }
+
+            .customAiIntervationForm {
+                margin-top: 15px;
+                display: flex;
+                flex-direction: column;
+
+                .customAiIntervationLabel {
+                    display: flex;
+                    gap: 15px;
+
+                    input[type="checkbox"] {
+                        appearance: none;
+                        -webkit-appearance: none;
+                        width: 25px;
+                        height: 25px;
+                        border: 1px solid $accent;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        position: relative;
+
+                        &:checked {
+                            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23C79952" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg>');
+                            background-repeat: no-repeat;
+                            background-position: center;
+                            background-size: 75%;
+                        }
+                    }
+
+
+                }
+
+                textarea {
+                    background-color: #576072;
+                    border: none;
+                    border-radius: 10px;
+                    resize: none;
+                    color: white;
+                    padding: 10px;
+
+
+                }
+
+                ::placeholder {
+                    color: rgb(255, 255, 255) !important;
+                }
+            }
+
+        }
+
+
+
+        button {
+            margin-top: 30px;
+            width: 100%;
+            height: 84px;
+            font-size: 20px;
+            font-weight: 500;
+            line-height: 24.38px;
+            @include bigScreen{
+                height: 62px;
+                font-size: 18px;
+            }
+            @include largeScreen{
+                height: 55px;
+                font-size: 16px;
+            }
+        }
+    }
+}

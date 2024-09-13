@@ -1,0 +1,196 @@
+.dashboard_container {
+    display: flex;
+
+    @include mediumScreen {
+        flex-direction: column;
+    }
+
+    .sidebar_section {
+        background-color: $secondary;
+        width: 15vw;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+
+        @include bigScreen {
+            width: 20vw;
+        }
+
+        @include largeScreen {
+            width: 25vw;
+
+        }
+
+        @include mediumScreen {
+            min-height: 100%;
+            width: 100%;
+            flex-direction: row;
+
+        }
+
+        .dashboardLogo {
+
+            width: 80%;
+            margin: 40px auto;
+
+            img {
+                width: 100%;
+                max-width: fit-content;
+            }
+
+            @include mediumScreen {
+                width: 40%;
+                margin: 20px auto;
+
+                img {
+                    width: 100%;
+                }
+
+            }
+
+        }
+
+        .dashboard_links {
+            ul {
+                li {
+                    .navLink_bg {
+                        background-color: $accent;
+                        color: white;
+
+                        padding: 17px 0px;
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        align-items: center;
+
+                        @include mediumScreen {
+                            color: white;
+                        }
+                    }
+
+                    .navLink_trans {
+                        background-color: transparent;
+                        color: white;
+
+                        padding: 17px 0px;
+
+                        display: flex;
+                        flex-direction: column;
+                        gap: 8px;
+                        align-items: center;
+
+                        @include mediumScreen {
+                            color: rgb(59, 57, 57);
+                        }
+                    }
+
+                    @include mediumScreen {
+                        span {
+                            span {
+                                display: none;
+                            }
+
+                            @include mediumScreen {
+                                font-size: 14px;
+                            }
+                        }
+                    }
+
+                    @include mediumScreen {
+                        svg {
+                            width: 30px;
+                            height: 30px;
+                        }
+                    }
+
+                }
+
+                @include mediumScreen {
+                    padding: 0px 10px;
+                    border-top-left-radius: 15px;
+                    border-top-right-radius: 15px;
+                    background-color: $accent;
+                    display: flex;
+                    align-items: center;
+                    flex-direction: row;
+                    justify-content: space-between;
+
+                }
+            }
+
+            @include mediumScreen {
+                position: fixed;
+                bottom: 0;
+                width: 100%;
+                z-index: 5;
+            }
+
+        }
+
+        .dashboard_credits {
+            background-color: $accent;
+            padding: 17px 17px;
+            display: flex;
+            gap: 10px;
+            flex-direction: column;
+
+            @include mediumScreen {
+                display: none;
+
+            }
+
+            :first-child {
+                background: transparent;
+                color: white;
+                border: 1px solid white;
+                padding: 10px;
+                border-radius: 10px;
+            }
+
+            .buyCreditBtn {
+                width: 100%;
+                background: white;
+                color: black;
+                border: none;
+                padding: 10px;
+                border-radius: 10px;
+            }
+        }
+    }
+
+    .dashboardPages {
+        background-color: #343a45;
+        color: white;
+        width: 100%;
+        padding: 40px;
+
+        .myAccountDiv {
+            display: flex;
+            flex-direction: column;
+            align-items: end;
+
+            justify-content: end;
+
+            button {
+                background-color: transparent;
+                color: white;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                font-size: 17px;
+            }
+
+            .logout_btn {
+                cursor: pointer;
+                margin-top: 10px;
+                background-color: $accent;
+                padding: 10px;
+                border-radius: 10px;
+                
+
+            }
+        }
+    }
+}

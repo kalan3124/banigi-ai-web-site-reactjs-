@@ -1,0 +1,16 @@
+.accordion{
+    .accordion-item{
+        background-color: #576072;
+        border-radius: 15px;
+        padding: 20px 50px;
+        .accordion-title{
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+        }
+        .accordion-content{
+            color: $accent;
+        }
+       
+    }
+}
